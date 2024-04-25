@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="" th:href="@{/home.css}">
+
+</head>
+<body>
+
+    
+    <header>
+        <nav>
+            <div >
+                <a href="#">Home</a>
+                <a href="/adminRegister">New Admin</a>
+                <a href="/adminLog">Existing Admin</a>
+                <a href="/userRegistration">New User</a>
+                <a href="/userLog">Existing User</a>
+                <a href="contact">Contact</a>
+                <a href="nextDonationDate">Next Donation Date</a><br>
+            </div>
+        </nav>
+    </header>
+    
+    	
+
+        <div class="text"><br><br>
+        <h1>BLOOD BANK <br> <span>DONOR MANAGEMENT SYSTEM</span></h1><br>
+             <h4>Donate Blood Save Life!</h4>
+            <a th:href="@{/userRegistration}" class="btn">Donate Now!</a>            
+        </div>
+        
+
+
+</body>
+</body>
+</html>
+

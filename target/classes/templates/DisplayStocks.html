@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" th:href="@{/DisplayStocks.css}">
+</head>
+<body>
+    <br><a href="/admin/home">Back</a></br>
+    <h2 align="center">Stock Details</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Blood Group</th>
+                <th>No of Units</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="VS : ${viewstock}">
+              
+                <td th:text="${VS.type}"></td>
+                <td th:text="${VS.units}"></td>
+               
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

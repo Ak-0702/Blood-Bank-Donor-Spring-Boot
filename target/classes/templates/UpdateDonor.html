@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>UpdateDetails</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/UpdateDonor.css}">
+</head>
+</head>
+<body>
+<a href="/admin/home">Back</a>
+<h2 align="center">Update Donor Details</h2>
+<table>
+    <thead>
+        <tr>
+                <th>Id</th>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Blood Group</th>
+                <th>Mobile number</th>
+                <th>Email Id</th>
+                <th>City</th>
+                <th>Last Donation Date</th>
+                <th>Modify Entry</th>
+                <th>Remove Record</th>
+            
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="dd : ${updatedetails}">
+            <td th:text="${dd.user_id}"></td>
+            <td th:text="${dd.user_fullname}"></td>
+            <td th:text="${dd.Age}"></td>
+            <td th:text="${dd.Gender}"></td>
+            <td th:text="${dd.BloodGroup}"></td>
+            <td th:text="${dd.usermobile}"></td>
+            <td th:text="${dd.user_email}"></td>
+            <td th:text="${dd.City}"></td>
+            <td th:text="${dd.lastDonationDate}"></td>
+            
+            
+            <td><a th:href="@{/updateDonor/{id}(id=${dd.user_id})}">Edit</a></td>
+            <td><a th:href="@{/deleteDonor/{id}(id=${dd.user_id})}">Delete</a></td>
+</tr>
+    </tbody>
+</table>
+
+</body>
+</html>
