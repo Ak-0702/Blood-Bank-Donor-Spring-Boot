@@ -1,0 +1,32 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Include Bootstrap CSS -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" th:href="@{/Adminhome.css}">
+</head>
+<body>
+
+    <nav>
+				<a href="#">Home</a>
+				
+				<a th:href="@{/DisplayDonorDetails}">DisplayDonorDetails</a>
+				<a th:href="@{/viewBloodStock}">ViewBloodStock</a>
+				<a th:href="@{/supply}">Supply</a>
+				<a th:href="@{/updateDonorDetails}">Update</a>
+				
+	</nav>
+	     <h4><a href="http://localhost:7007">Back</a></h4>
+    <div class="home-container">
+        <h2 class="text-center">Welcome, Admin!</h2>
+        <p class="text-center">Thankyou for registering.</p>
+    </div>
+    
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://i.gifer.com/9LAN.gif"></script>
+    <!--  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+</body>
+</html>

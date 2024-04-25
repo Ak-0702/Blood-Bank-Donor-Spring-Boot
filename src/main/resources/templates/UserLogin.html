@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+    <style>
+        
+ body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('../images/bg1.png'); 
+		    background-attachment: fixed;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    background-position: center center; 
+        }
+        .login-container {
+            width: 300px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 26px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background-color: #000000;
+        }
+        a {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+a:hover {
+    background-color: #999;
+}
+      
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2 class="text-center">User Login</h2>
+        <form th:action="@{/userLog}" th:object="${user}" method="post">
+            <div class="form-group">
+                <input th:field="*{username}" type="text" class="form-control" id="username"  placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input th:field="*{password}" type="password" class="form-control"  id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="button" class="btn btn-secondary btn-block" id="signup">Sign Up</button>
+        
+    </div>
+
+  </form>
+
+</body>
+</html>
+
